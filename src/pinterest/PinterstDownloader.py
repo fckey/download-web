@@ -73,7 +73,7 @@ class PinterstDownloader():
                 if (self.processed.has_key(boardKey)):
                     self.logger.info("%s was already processed. Skipping." %boardKey)
                     continue
-                # self.downloadFromBoard(boardKey)
+                self.downloadFromBoard(boardKey)
                 self.processed[boardKey] = datetime.date.today()
         finally:
             f = open(PROCESSED_DUMP, "w")
